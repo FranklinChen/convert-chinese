@@ -31,4 +31,4 @@ files with an extra extension `.output` added to the original files' paths.
 
 ## Development notes
 
-Note: currently using a fork https://github.com/arthurlacoste/google-translate-api that fixes a bug in the main `google-translate-api` distribution.
+Note: currently using a fork https://github.com/FranklinChen/google-translate-api that fixes critical bugs not yet merged into https://github.com/matheuss/google-translate-api for some reason.
