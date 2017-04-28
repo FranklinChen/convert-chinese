@@ -32,7 +32,7 @@ function translateFile(filePath) {
 
     fs.readFile(filePath, 'utf8', function (err, data) {
         if (err) {
-            return console.error(`readFile: ${err}`);
+            return console.error('readFile:', err);
         } else {
             translate(data, {from: from, to: to})
                 .then(function(result) {
@@ -46,11 +46,11 @@ function translateFile(filePath) {
 
                     fs.writeFile(outputFilePath, fixedText, function (err) {
                         if (err) {
-                            return console.error(`writeFile: ${err}`);
+                            return console.error('writeFile:', err);
                         }
                     });
                 }).catch(function (err) {
-                    return console.error(`translate: ${err}`);
+                    return console.error('translate:', err);
                 });
         }
     });
