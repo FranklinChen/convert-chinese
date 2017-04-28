@@ -34,12 +34,13 @@ function translateFile(filePath) {
         if (err) {
             return console.error('readFile:', err);
         } else {
-            translate(data, {from: from, to: to})
+            const tabEncodedData = data.replace(/\t/g, '----');
+            translate(tabEncodedData, {from: from, to: to})
                 .then(function(result) {
                     const outputFilePath = `${filePath}.output`;
-                    const text = result.text;
+                    const tabDecodedText = result.text.replace(/----/g, '\t');
 
-                    fs.writeFile(outputFilePath, text, function (err) {
+                    fs.writeFile(outputFilePath, tabDecodedText, function (err) {
                         if (err) {
                             return console.error('writeFile:', err);
                         }
