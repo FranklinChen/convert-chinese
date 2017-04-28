@@ -39,12 +39,7 @@ function translateFile(filePath) {
                     const outputFilePath = `${filePath}.output`;
                     const text = result.text;
 
-                    // Hack since google-translate-api seems buggy and returns
-                    // the string '...null' for translation to Chinese!!
-                    // TODO File bug report.
-                    let fixedText = text.replace(/null$/, '');
-
-                    fs.writeFile(outputFilePath, fixedText, function (err) {
+                    fs.writeFile(outputFilePath, text, function (err) {
                         if (err) {
                             return console.error('writeFile:', err);
                         }
