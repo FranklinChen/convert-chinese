@@ -12,15 +12,17 @@ $ brew install node
 
 ## Install
 
+Clone this repo and `cd` into it, then run
+
 ```
 $ npm install -g
 ```
 
-installs `convert-chinese`.
+to install `convert-chinese`.
 
 ## Usage
 
-Example usage:
+Example usage, to convert from traditional (`zh-TW`) to simplified (`zh-CN`):
 
 ```
 $ convert-chinese --source zh-TW --target zh-CN test/tw/*.txt
@@ -28,6 +30,14 @@ $ convert-chinese --source zh-TW --target zh-CN test/tw/*.txt
 
 converts each of the input files from traditional to simplified output
 files with an extra extension `.output` added to the original files' paths.
+
+Note: as usual, if you want to do something like convert an entire directory tree, using the shell to generate all the paths:
+
+```
+$ find rootDir -name '*.txt' -print0 | xargs -0 convert-chinese --source zh-TW --target zh-CN
+```
+
+will run `convert-chinese` on all `.txt` files under `rootDir` recursively.
 
 ## Development notes
 
