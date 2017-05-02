@@ -1,5 +1,5 @@
 {
-  "name": "convert-chinese",
+  "name": "convert-chinese-free",
   "version": "1.0.0",
   "description": "Convert Chinese between simplified and traditional",
   "bin": "./index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TalkBank/convert-chinese.git"
+    "url": "git+https://github.com/TalkBank/convert-chinese-free.git"
   },
   "keywords": [
     "Chinese",
@@ -18,9 +18,9 @@
   "author": "Franklin Chen (htp://franklinchen.com)",
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/TalkBank/convert-chinese/issues"
+    "url": "https://github.com/TalkBank/convert-chinese-free/issues"
   },
-  "homepage": "https://github.com/TalkBank/convert-chinese#readme",
+  "homepage": "https://github.com/TalkBank/convert-chinese-free#readme",
   "dependencies": {
     "commander": "^2.9.0",
     "google-translate-api": "github:FranklinChen/google-translate-api"
