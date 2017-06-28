@@ -22,10 +22,10 @@
   },
   "homepage": "https://github.com/TalkBank/convert-chinese-free#readme",
   "dependencies": {
-    "commander": "^2.9.0",
-    "google-translate-api": "github:FranklinChen/google-translate-api"
+    "commander": "^2.10.0",
+    "google-translate-api": "^2.3.0"
   },
   "devDependencies": {
-    "mocha": "^3.3.0"
+    "mocha": "^3.4.2"
   }
 }
